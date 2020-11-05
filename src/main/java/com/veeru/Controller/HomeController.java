@@ -98,9 +98,9 @@ public class HomeController {
         try {
             Iterator iterator = repos.entrySet().iterator();
             HashMap<String, HashMap<String, Integer>> result = new HashMap<>();
-            HashMap<String, Integer> contributors = new HashMap<>();
             while (iterator.hasNext()) { // iterate over all repositories to find top contributors
                 Map.Entry<String, Integer> entry = (Map.Entry<String, Integer>) iterator.next();
+                HashMap<String, Integer> contributors = new HashMap<>();
                 pageNo = 1;
                 while (true) { // iterate over all the pages of contributors
                     String URL = "https://api.github.com/repos/" + userName + "/" + entry.getKey() + "/contributors?page=";

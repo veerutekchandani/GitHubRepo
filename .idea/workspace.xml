@@ -7,12 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad85cb53-1516-4fcc-82f8-a154b43962b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/veeru/Controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veeru/Controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/veeru/Controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veeru/Controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spring2/WEB-INF/classes/com/veeru/Controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring2/WEB-INF/classes/com/veeru/Controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spring2/WEB-INF/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring2/WEB-INF/jsp/home.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,7 +286,7 @@
       <workItem from="1604460811144" duration="28941000" />
       <workItem from="1604512034351" duration="110000" />
       <workItem from="1604512247144" duration="5543000" />
-      <workItem from="1604547520954" duration="23774000" />
+      <workItem from="1604547520954" duration="24066000" />
     </task>
     <servers />
   </component>
