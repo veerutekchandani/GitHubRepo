@@ -69,7 +69,7 @@ public class HomeController {
                 pageNo++;
                 httpURLConnection.disconnect();
             }
-            result = sortByValueDescendinf(result); // sort by no. of fork count in descending order
+            result = sortByValueDescending(result); // sort by no. of fork count in descending order
 
             // insert top n repos into hasmap
             HashMap<String, Integer> finalResult = new HashMap<>();
@@ -115,7 +115,7 @@ public class HomeController {
                     pageNo++;
                     httpURLConnection.disconnect();
                 }
-                contributors = sortByValueDescendinf(contributors); // sort by no. of contributions in descending order
+                contributors = sortByValueDescending(contributors); // sort by no. of contributions in descending order
                 System.out.println("came here");
                 // insert top m contributors into hashmap
                 Iterator iterator1 = contributors.entrySet().iterator();
@@ -128,6 +128,7 @@ public class HomeController {
                     System.out.println(entry1.getKey());
                     counter++;
                 }
+                contr = sortByValueDescending(contr);
                 result.put(entry.getKey(), contr);
             }
             return result;
@@ -173,7 +174,7 @@ public class HomeController {
     }
 
     // function to sort hashmap based on key in descending order
-    public HashMap<String, Integer> sortByValueDescendinf(HashMap<String, Integer> hashMap) {
+    public HashMap<String, Integer> sortByValueDescending(HashMap<String, Integer> hashMap) {
         return hashMap.entrySet()
                 .stream()
                 .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))

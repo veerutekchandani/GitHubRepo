@@ -69,7 +69,7 @@
                         <c:forEach items="${list.value}" var="listItem">
                             <li style="background: #ADEBAD;" class="list-group-item">
                                 <a style="padding-left: 20px;" href="${baseUrl}${listItem}"><c:out
-                                        value="${listItem.key}"></c:out></a><span> (${listItem.value})</span>
+                                        value="${listItem.key}"></c:out></a><span style="float: right;padding-right: 10px;"> (${listItem.value})</span>
                             </li>
                         </c:forEach>
                         <c:set var="count" value="${count + 1}" scope="page"/>
