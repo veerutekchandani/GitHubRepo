@@ -108,6 +108,7 @@ public class HomeController {
                     while (counter <= m && iterator1.hasNext()) {
                         Map.Entry<String,Integer> entry1 = (Map.Entry<String, Integer>) iterator1.next();
                         contr.add(entry1.getKey());
+                        counter++;
                     }
                     page++;
                 }
