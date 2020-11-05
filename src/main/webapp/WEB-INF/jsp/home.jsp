@@ -26,7 +26,7 @@
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-3" align="center"><br><br>
-            <form:form method="POST" action="/GitHubRepo_war_exploded/submit" modelAttribute="repo">
+            <form:form method="POST" action="/submit" modelAttribute="repo">
                 <table style="border-collapse:separate; border-spacing:5px;">
                     <tr>
                         <td><form:label path="userName">UserName:</form:label></td>

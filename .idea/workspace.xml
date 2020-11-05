@@ -6,7 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad85cb53-1516-4fcc-82f8-a154b43962b2" name="Default Changelist" comment="" />
+    <list default="true" id="ad85cb53-1516-4fcc-82f8-a154b43962b2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veeru/Controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veeru/Controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -285,7 +288,7 @@
       <workItem from="1604460811144" duration="28941000" />
       <workItem from="1604512034351" duration="110000" />
       <workItem from="1604512247144" duration="5543000" />
-      <workItem from="1604547520954" duration="12061000" />
+      <workItem from="1604547520954" duration="12322000" />
     </task>
     <servers />
   </component>

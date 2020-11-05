@@ -24,7 +24,7 @@ public class HomeController {
     private HttpURLConnection httpURLConnection;
     int page;
 
-    @RequestMapping("/home")
+    @RequestMapping("/")
     public ModelAndView home(Model model) throws IOException {
         return new ModelAndView("home", "repo", new Repository());
     }
