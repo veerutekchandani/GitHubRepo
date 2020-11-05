@@ -47,7 +47,7 @@
                 </table>
             </form:form>
             <br><br>
-            <c:if test="${not empty userName}">
+            <c:if test="${(not empty userName) and (empty error)}">
                 <a class="btn btn-primary" href="https://github.com/${userName}">${userName}</a>
             </c:if>
         </div>
