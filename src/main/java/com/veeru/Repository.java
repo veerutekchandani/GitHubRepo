@@ -1,31 +1,31 @@
 package com.veeru;
 
 public class Repository {
-    String userName;
-    String n;
-    String m;
+    String orgName;
+    String noOfRepo;
+    String noOfContr;
 
-    public String getUserName() {
-        return userName;
+    public String getOrgName() {
+        return orgName;
     }
 
-    public String getN() {
-        return n;
+    public String getNoOfRepo() {
+        return noOfRepo;
     }
 
-    public String getM() {
-        return m;
+    public String getNoOfContr() {
+        return noOfContr;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setOrgName(String userName) {
+        this.orgName = userName;
     }
 
-    public void setN(String n) {
-        this.n = n;
+    public void setNoOfRepo(String noOfRepo) {
+        this.noOfRepo = noOfRepo;
     }
 
-    public void setM(String m) {
-        this.m = m;
+    public void setNoOfContr(String noOfContr) {
+        this.noOfContr = noOfContr;
     }
 }

@@ -15,9 +15,10 @@
         border: 1px solid black;
         border-radius: 5px;
     }
+
     a {
-        color:black;
-        float:left;
+        color: black;
+        float: left;
     }
 </style>
 <body style="height: 100vh;overflow-x: hidden;background: rgba(0,0,0,0.09);">
@@ -29,16 +30,19 @@
             <form:form method="POST" action="/GitHubRepo_war_exploded/submit" modelAttribute="repo">
                 <table style="border-collapse:separate; border-spacing:5px;">
                     <tr>
-                        <td><form:label path="userName">UserName:</form:label></td>
-                        <td><form:input path="userName" placeholder="Enter username" required="required"></form:input></td>
+                        <td><form:label path="orgName">Org Name:</form:label></td>
+                        <td><form:input path="orgName" placeholder="Enter organization name"
+                                        required="required"></form:input></td>
                     </tr>
                     <tr>
-                        <td><form:label path="n">Value of n:</form:label></td>
-                        <td><form:input cssStyle="width: 100%;" type="number" path="n" placeholder="Enter n" required="required" min="1" max="2000"></form:input></td>
+                        <td><form:label path="noOfRepo">Value of n:</form:label></td>
+                        <td><form:input cssStyle="width: 100%;" type="number" path="noOfRepo" placeholder="Enter n"
+                                        required="required" min="1" max="2000"></form:input></td>
                     </tr>
                     <tr>
-                        <td><form:label path="m">Value of m:</form:label></td>
-                        <td><form:input cssStyle="width: 100%;" type="number" path="m" placeholder="Enter m" required="required" min="1" max="2000"></form:input></td>
+                        <td><form:label path="noOfContr">Value of m:</form:label></td>
+                        <td><form:input cssStyle="width: 100%;" type="number" path="noOfContr" placeholder="Enter m"
+                                        required="required" min="1" max="2000"></form:input></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -46,10 +50,6 @@
                     </tr>
                 </table>
             </form:form>
-            <br><br>
-            <c:if test="${not empty userName}">
-                <a class="btn btn-primary" href="https://github.com/${userName}">${userName}</a>
-            </c:if>
         </div>
 
         <div class="col-md-6" align="center" style="color:black;"><br><br>
@@ -57,25 +57,31 @@
                 <c:if test="${not empty error}">
                     Error: ${error}
                 </c:if>
-                <c:set var="count" value="1" scope="page" />
-                <c:set var="baseUrl" value="https://github.com/" />
+                <c:set var="count" value="1" scope="page"/>
+                <c:set var="baseUrl" value="https://github.com/"/>
                 <c:forEach items="${repoList}" var="list">
-                    <ul class="list-group" style="line-height: 15px;cursor:pointer;">
-                        <li style="background: #99ccff;" class="list-group-item" data-toggle="collapse" data-target="#collapse${count}">
-                            <a href="${baseUrl}${userName}/${list.key}"><c:out value="${list.key}"></c:out></a>
-                            <span style="float: right;">+</span></li>
-                        <ul id="collapse${count}" class="list-group collapse" style="line-height: 10px;cursor:default;">
+                <ul class="list-group" style="line-height: 15px;cursor:pointer;">
+                    <li style="background: #99ccff;" class="list-group-item" data-toggle="collapse"
+                        data-target="#collapse${count}">
+                        <a href="${baseUrl}${orgName}/${list.key}"><c:out value="${list.key}"></c:out></a>
+                        <span style="float: right;">+</span></li>
+                    <ul id="collapse${count}" class="list-group collapse" style="line-height: 10px;cursor:default;">
                         <c:forEach items="${list.value}" var="listItem">
                             <li style="background: #ADEBAD;" class="list-group-item">
-                                <a style="padding-left: 20px;" href="${baseUrl}${listItem}"><c:out value="${listItem}"></c:out></a>
+                                <a style="padding-left: 20px;" href="${baseUrl}${listItem}"><c:out
+                                        value="${listItem.key}"></c:out></a><span> (${listItem.value})</span>
                             </li>
                         </c:forEach>
                         <c:set var="count" value="${count + 1}" scope="page"/>
                     </ul>
-                </c:forEach>
+                    </c:forEach>
             </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-2" align="center"><br><br>
+            <c:if test="${(not empty orgName) and (empty error)}">
+                <a class="btn btn-primary" href="https://github.com/${orgName}">${orgName}</a>
+            </c:if>
+        </div>
     </div>
 </div>
 </body>
