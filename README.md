@@ -9,4 +9,4 @@ To find top n repositories of any organization and there top m contributors
   4. Click on build and then run
   5. It will run on localhost:8080/ by default( You can change port in configurations)
   
-### Also deployed on githubrepo2.herokuap.com
+### Deployed on https://githubrepo2.herokuapp.com/
